@@ -22,7 +22,7 @@ def test_save_csv():
     list_to_write = [
     [1,2,3,4,5,6]]
    
-    assert fileio.save_csv(path('./data/qualifying_loans.csv'))
+    assert fileio.save_csv(path('../data/qualifying_loans.csv'))
 
 def test_calculate_monthly_debt_ratio():
     assert calculators.calculate_monthly_debt_ratio(1500, 4000) == 0.375
@@ -31,7 +31,7 @@ def test_calculate_loan_to_value_ratio():
     assert calculators.calculate_loan_to_value_ratio(210000, 250000) == 0.84
 
 def test_filters():
-    file_path = Path('./data/daily_rate_sheet.csv')
+    file_path = Path('../data/daily_rate_sheet.csv')
     bank_data = fileio.load_csv(file_path)
     current_credit_score = 750
     income = 4000
